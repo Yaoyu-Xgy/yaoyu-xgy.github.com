@@ -1,38 +1,19 @@
 ---
-title: Hello World
+title: 简介
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+# 簡介 / Introduction 
 
-## Quick Start
+如你所見，這是我的博客。我會用它來記錄、發布或者傳遞一些文字和媒體。
 
-### Create a new post
+# 致謝 / Thanks 
 
-``` bash
-$ hexo new "My New Post"
-```
+感謝 [GitHub](github.com) 和 Hexo，依靠它们的服務，我得以輕鬆地建造這個站點。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+那麼，開始吧！
 
-### Run server
+# 主要內容 / Main Content 
 
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+- 折騰是生命 / Geek Staff
+- 其實大家都不想碰的政治 / Disturbing Politics
+- 社會事件與觀察 / Society
+- 互聯網胡侃 / Nonsense on Internet
