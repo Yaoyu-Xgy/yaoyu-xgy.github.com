@@ -1,120 +1,436 @@
 <!DOCTYPE html>
+
 <html lang="zh">
-    <!DOCTYPE html>
-<html>
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-  
-  <title>简介 - Yaoyun‘s Blog</title>
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    <link rel='manifest' href='/manifest.json'>
-  
+    <!-- ### Resource Hint ### -->
 
-  
-<link rel="stylesheet" href="/css/var.css">
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
 
-  
-<link rel="stylesheet" href="/css/main.css">
+<!-- busuanzi -->
 
-  
-<link rel="stylesheet" href="/css/typography.css">
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
 
-  
-<link rel="stylesheet" href="/css/code-highlighting.css">
 
-  
-<link rel="stylesheet" href="/css/components.css">
+<!-- comment -->
 
-  
-<link rel="stylesheet" href="/css/nav.css">
 
-  
-<link rel="stylesheet" href="/css/paginator.css">
 
-  
-<link rel="stylesheet" href="/css/footer.css">
 
-  
-<link rel="stylesheet" href="/css/post-list.css">
 
-  
-<link rel="stylesheet" href="/css/waline.css">
 
-  
-  
-  
-<link rel="stylesheet" href="/css/post.css">
 
-  
+<!-- analytics -->
 
-  
-<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>简介 | Yaoyun‘s Blog</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/suka-favicon.ico">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Yaoyun‘s Blog"><meta name="msapplication-starturl" content="http://example.com"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Yaoyun‘s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="简介 | Yaoyun‘s Blog"><meta property="og:site_name" content="Yaoyun‘s Blog"><meta property="og:type" content="article"><meta property="og:url" content="http://example.com/2021/06/23/hello-world/"><meta property="og:locale" content="zh"><meta name="description" content="簡介 &#x2F; Introduction如你所見，這是我的博客。我會用它來記錄、發布或者傳遞一些文字和媒體。 致謝 &#x2F; Thanks感謝 GitHub 和 Hexo，依靠它们的服務，我得以輕鬆地建造這個站點。 那麼，開始吧！ 主要內容 &#x2F; Main Content 折騰是生命 &#x2F; Geek Staff 其實大家都不想碰的政治 &#x2F; Disturbing Politics 社會事件與觀察 &#x2F; Society - Zhang Yaoyun - Yaoyun‘s Blog"><meta property="article:published_time" content="2021-06-22T23:22:31.706Z"><meta property="article:modified_time" content="2021-06-22T23:16:12.858Z"><meta property="og:updated_time" content="2021-06-22T23:16:12.858Z"><meta property="article:author" content="Zhang Yaoyun"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://example.com/2021/06/23/hello-world/">
+
+    <meta name="generator" content="Hexo 5.4.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://example.com/2021/06/23/hello-world/",
+    "@type": "BlogPosting",
+    "logo": "http://example.com/img/suka-favicon.ico",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://example.com/2021/06/23/hello-world/"
+    },
+    "headline": "简介 | Yaoyun‘s Blog",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://example.com/img/suka-favicon.ico"
+    },
+    
+    "datePublished": "2021-06-22T23:22:31.706Z",
+    "dateModified": "2021-06-22T23:16:12.858Z",
+    "author": {
+        "@type": "Person",
+        "name": "Zhang Yaoyun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://example.com/img/default_avatar.png"
+        },
+        "description": "Hi, nice to meet you."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Yaoyun‘s Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://example.com/img/suka-favicon.ico"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://example.com/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "",
+    "description": "簡介 / Introduction如你所見，這是我的博客。我會用它來記錄、發布或者傳遞一些文字和媒體。 致謝 / Thanks感謝 GitHub 和 Hexo，依靠它们的服務，我得以輕鬆地建造這個站點。 那麼，開始吧！ 主要內容 / Main Content 折騰是生命 / Geek Staff 其實大家都不想碰的政治 / Disturbing Politics 社會事件與觀察 / Society - Zhang Yaoyun - Yaoyun‘s Blog"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
     <body>
-        <nav id="theme-nav">
-    <div class="inner">
-        <a class="title" href="/">Blog</a>
-        <div class="nav-arrow"></div>
-        <div class="nav-items">
-            <a class="nav-item nav-item-home" href="/">Home</a>
             
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">Yaoyun‘s Blog</a></h1>
+
+    <p class="text-center header-slogan">
+        
             
-            <a class="nav-item" href="/archives">Archives</a>
+                Hi, nice to meet you.
             
-            
-            
-            <a class="nav-item" href="/friends">Friends</a>
-            
-            
-            
-            <a class="nav-item" href="/projects">Projects</a>
-            
-            
-            
-            <a class="nav-item" href="/about">About</a>
-            
-            
-            
-            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Yaoyu-Xgy" target="_blank">&nbsp;</a>
-            
-            
-        </div>
-    </div>
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+        <a href="/search" class="navbar-link">Search</a>
+    
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+        <li class="menu-item">
+            <a href="http://service.weibo.com/share/share.php?appkey=&title=Yaoyun‘s Blog&url=http://example.com&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+        </li>
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=Yaoyun‘s Blog&url=http://example.com&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+        <li class="menu-item">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+        </li>
+        
+
+        <!-- Share Google+ -->
+        
+        <li class="menu-item">
+            <a href="https://plus.google.com/share?url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
+        </li>
+        
+
+        <!-- Share LinkedIn -->
+        
+        <li class="menu-item">
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com&title=简介" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+        </li>
+        
+
+        <!-- Share QQ -->
+        
+        <li class="menu-item">
+            <a href="http://connect.qq.com/widget/shareqq/index.html?site=Yaoyun‘s Blog&title=简介&summary=Yaoyun is talking here&pics=http://example.com/img/suka-favicon.ico&url=http://example.com" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+        </li>
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://example.com&text=简介" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABiUlEQVR42u3ayw7CMAxE0f7/T8MWlWQ8Ln1M0O0GKCU9lazEdtheAccGAgSIJRCbOPbXfA2yO/d5nTUuiFjEMGjE+f2ADnB0HkQ2Qg08et85Nx0XxPIIJxj334P4T8Qo+EaLlboOxHqI2UIzS0hU4nL6KgridoQz2JHX07JtELciDhezRnF0eVUO4hLEL8mLSmLUhAUiH6GaIGrhml0z+mwvYCAiEFUzRCW8aiEskyIQsYhyUiluOAva8oFAxCK6CW8VdM5vQayDqJqjVaB2Gu4gMhFVQ0QFXwdUFsQg4hD2D40kt2q6g1gH4WyuqoCuJioQayHcG80mMycJnhbEIKIQ7saaTE5E0SzBICIRatJygrD7ACDyEWqicYKzW1BbXX4QjyKcxMUJNqf5enhzFsStiM4fhavNGbWBLxNdEHGIKsF1GmvdBAdEPqIzKXU23mRhBWJJhDOo24RtbcSBiEWoZLj7hw+7SQIiAuFu0jsFk9tgAZGLcAdyGmJuIxVELuLJAwQIENGIN/f1CTiVtiS0AAAAAElFTkSuQmCC" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
 </nav>
-        <article class="post">
-    <div class="meta">
-        
-        <div class="date" id="date">
-            
-            
-            
-            
-            
-            
-            <span>June</span>
-            
-            
-            
-            
-            
-            
-            
-            <span>23,</span>
-            <span>2021</span>
-        </div>
-        
+</header>
 
-        <h2 class="title">简介</h2>
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">简介</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/default_avatar.png" src="/img/suka-lazyload.gif" alt="Zhang Yaoyun's Avatar">
+        <span>2021-06-23</span>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+    <li class="menu-item">
+        <a href="http://service.weibo.com/share/share.php?appkey=&title=简介&url=http://example.com/2021/06/23/hello-world/&pic=http://example.com/img/suka-favicon.ico&searchPic=false&style=simple" target="_blank" rel="external noopener noreferrer nofollow">Share to Weibo</a>
+    </li>
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=简介&url=http://example.com/2021/06/23/hello-world/&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+    <li class="menu-item">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/06/23/hello-world/" target="_blank" rel="external noopener noreferrer nofollow">Share to Facebook</a>
+    </li>
+    
+
+    <!-- Share Google+ -->
+    
+    <li class="menu-item">
+        <a href="https://plus.google.com/share?url=http://example.com/2021/06/23/hello-world/" target="_blank" rel="external noopener noreferrer nofollow">Share to Google+</a>
+    </li>
+    
+
+    <!-- Share LinkedIn -->
+    
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://example.com/2021/06/23/hello-world/&title=Yaoyun‘s Blog" target="_blank" rel="external noopener noreferrer nofollow">Share to LinkedIn</a>
+    </li>
+    
+
+    <!-- Share QQ -->
+    
+    <li class="menu-item">
+        <a href="http://connect.qq.com/widget/shareqq/index.html?site=Yaoyun‘s Blog&title=Yaoyun‘s Blog&summary=Yaoyun is talking here&pics=http://example.com/img/suka-favicon.ico&url=http://example.com/2021/06/23/hello-world/" target="_blank" rel="external noopener noreferrer nofollow"> Share to QQ</a>
+    </li>
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=http://example.com/2021/06/23/hello-world/&text=Yaoyun‘s Blog" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAAAAAB0L9x7AAABiUlEQVR42u3ayw7CMAxE0f7/T8MWlWQ8Ln1M0O0GKCU9lazEdtheAccGAgSIJRCbOPbXfA2yO/d5nTUuiFjEMGjE+f2ADnB0HkQ2Qg08et85Nx0XxPIIJxj334P4T8Qo+EaLlboOxHqI2UIzS0hU4nL6KgridoQz2JHX07JtELciDhezRnF0eVUO4hLEL8mLSmLUhAUiH6GaIGrhml0z+mwvYCAiEFUzRCW8aiEskyIQsYhyUiluOAva8oFAxCK6CW8VdM5vQayDqJqjVaB2Gu4gMhFVQ0QFXwdUFsQg4hD2D40kt2q6g1gH4WyuqoCuJioQayHcG80mMycJnhbEIKIQ7saaTE5E0SzBICIRatJygrD7ACDyEWqicYKzW1BbXX4QjyKcxMUJNqf5enhzFsStiM4fhavNGbWBLxNdEHGIKsF1GmvdBAdEPqIzKXU23mRhBWJJhDOo24RtbcSBiEWoZLj7hw+7SQIiAuFu0jsFk9tgAZGLcAdyGmJuIxVELuLJAwQIENGIN/f1CTiVtiS0AAAAAElFTkSuQmCC" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
     </div>
-
-    <div class="divider"></div>
-
-    <div class="content">
-        <h1 id="簡介-Introduction"><a href="#簡介-Introduction" class="headerlink" title="簡介 / Introduction"></a>簡介 / Introduction</h1><p>如你所見，這是我的博客。我會用它來記錄、發布或者傳遞一些文字和媒體。</p>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E7%B0%A1%E4%BB%8B-Introduction"><span class="post-toc-number">1.</span> <span class="post-toc-text">簡介 &#x2F; Introduction</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E8%87%B4%E8%AC%9D-Thanks"><span class="post-toc-number">2.</span> <span class="post-toc-text">致謝 &#x2F; Thanks</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%B8%BB%E8%A6%81%E5%85%A7%E5%AE%B9-Main-Content"><span class="post-toc-number">3.</span> <span class="post-toc-text">主要內容 &#x2F; Main Content</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <h1 id="簡介-Introduction"><a href="#簡介-Introduction" class="headerlink" title="簡介 / Introduction"></a>簡介 / Introduction</h1><p>如你所見，這是我的博客。我會用它來記錄、發布或者傳遞一些文字和媒體。</p>
 <h1 id="致謝-Thanks"><a href="#致謝-Thanks" class="headerlink" title="致謝 / Thanks"></a>致謝 / Thanks</h1><p>感謝 <a href="github.com">GitHub</a> 和 Hexo，依靠它们的服務，我得以輕鬆地建造這個站點。</p>
 <p>那麼，開始吧！</p>
 <h1 id="主要內容-Main-Content"><a href="#主要內容-Main-Content" class="headerlink" title="主要內容 / Main Content"></a>主要內容 / Main Content</h1><ul>
@@ -124,64 +440,129 @@
 <li>互聯網胡侃 / Nonsense on Internet</li>
 </ul>
 
-    </div>
+                    </article>
+                    
 
-    <div class="about">
-        <h1>About this Post</h1>
-        <p>This post is written by Zhang Yaoyun, licensed under <a
-                target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC 4.0</a>.</p>
-    </div>
 
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2021-06-23");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2021-06-22T23:22:31.706Z" itemprop="datePublished">2021-06-23</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
     
-        
+
+    <!-- Next Nav -->
     
-</article>
-        <footer>
-    <div class="inner">
-        <div class="links">
-            
-            <div class="group">
-                <h4 class="title">Blog</h4>
+        <li class="page-item page-next">
+            <a href="/2021/05/09/%E8%BF%87%E7%83%AD%E4%BA%92%E8%81%94%E7%BD%91/" rel="next">
+                <div class="page-item-title"><i class="icon icon-forward" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">过热互联网</div>
+            </a>
+        </li>
+    
+</ul>
+</div>
+
                 
-                <a href="/" class="item" target="_blank">Blog</a>
-                
-                <a href="/archives" class="item" target="_blank">Archives</a>
-                
-                <a href="/friends" class="item" target="_blank">Friends</a>
-                
-                <a href="/projects" class="item" target="_blank">Projects</a>
-                
-                <a href="/resume" class="item" target="_blank">Resume</a>
-                
-                <a href="/about" class="item" target="_blank">About</a>
-                
-                <a href="/atom.xml" class="item" target="_blank">RSS</a>
+                    <!-- # Comment # -->
+                    
                 
             </div>
-            
-            <div class="group">
-                <h4 class="title">Projects</h4>
-                
-            </div>
-            
-            <div class="group">
-                <h4 class="title">Me</h4>
-                
-                <a href="https://github.com/Yaoyu-Xgy" class="item" target="_blank">GitHub</a>
-                
-                <a href="mailto:yaoyun-zhang@outlook.com" class="item" target="_blank">Email</a>
-                
-            </div>
-            
         </div>
-        &copy; 2021 Zhang Yaoyun<br />
-        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://example.com">Yaoyun‘s Blog</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
 </footer>
 
-        
-<script src="/js/main.js"></script>
 
-        
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+
+<!-- ### Custom Footer ### -->
+
     </body>
+
 </html>
