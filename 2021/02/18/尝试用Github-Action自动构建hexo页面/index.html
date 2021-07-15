@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        hexo-theme-suka © SukkaW
+        GitHub: https://github.com/SukkaW/hexo-theme-suka
+    -->
+
+    <!-- ### Resource Hint ### -->
+
+    <!-- ## DNS Prefetch ## -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+<!-- busuanzi -->
+
+    <link rel="dns-prefetch" href="//busuanzi.ibruce.info">
+
+
+<!-- comment -->
+
+
+
+
+
+
+
+<!-- analytics -->
+
+
+
+
+
+
+
+    <!-- ## Preload ## -->
+    
+    <!-- Busuanzi -->
+    
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" as="script">
+
+
+
+
+
+
+
+    <!-- ### Meta & Title & Info ### -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta name="renderer" content="webkit">
+
+    <!-- Title -->
+    <title>尝试用Github Action自动构建hexo页面 | Yaoyun‘s Blog</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image&#x2F;ico" href="/img/YaoyunCircularSmallIcon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/img/YaoyunCircularAppleTouchIcon.png"><link rel="icon" typt="image&#x2F;png" sizes="32x32" href="/img/YaoyunCircularMediumIcon.png"><link rel="icon" typt="image&#x2F;png" sizes="16x16" href="/img/YaoyunCircularSmallIcon.png">
+
+    <!-- ### Import File ### -->
+    <link rel="stylesheet" href="/lib/spectre/spectre.min.css"><style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    a, a:visited {
+        color: #0070ff;
+    }
+
+    a:active, a:focus, a:hover {
+        color: #0070ff;
+        opacity: .75;
+    }
+
+    #post-content a,
+    #post-content a:hover,
+    #post-content a:focus,
+    #post-content a:visited {
+        color: #005eb9;
+        opacity: 1;
+    }
+
+    
+
+    .post-entry .card-body a {
+        color: #0070ff;
+    }
+
+    .avatar {
+        background: #444;
+    }
+
+    .navbar-link,
+    .navbar-link:visited,
+    .timeline .timeline-item .timeline-icon.icon-lg {
+        color: #0070ff;
+    }
+
+    .navbar-link:hover {
+        color: #0070ff;
+        opacity: .8;
+    }
+
+    #search-input .btn,
+    #disqus_click_btn,
+    #disqus-switch-to-direct,
+    #disqus-loadmore-button {
+        background: #727e96;
+        border-color: #727e96;
+        color: #fff;
+    }
+
+    #post-toc a.post-toc-link,
+    #post-toc a.post-toc-link:visited,
+    .share-menu.menu .menu-item>a {
+        color: #727e96;
+    }
+
+    .share-menu.menu .menu-item>a:hover,
+    .share-menu.menu .menu-item>a:focus,
+    .share-menu.menu .menu-item>a:visited {
+        color: #50596c;
+        background: #f8f9fa;
+        opacity: .85;
+    }
+</style><link rel="stylesheet" href="/css/style.min.css">
+
+
+
+
+
+
+
+
+    <!-- Prettify Theme -->
+    
+    <link rel="preload" href="/css/highlight/github.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/highlight/github.min.css"></noscript>
+
+
+
+
+
+<script>
+/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+</script>
+
+    <!-- ### Site Verification ### -->
+    
+
+
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Yaoyun‘s Blog"><meta name="msapplication-starturl" content="http://yaoyu-xgy.github.io"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Yaoyun‘s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- ### The Open Graph & Twitter Card Protocol ### -->
+    <meta property="og:title" content="尝试用Github Action自动构建hexo页面 | Yaoyun‘s Blog"><meta property="og:site_name" content="Yaoyun‘s Blog"><meta property="og:type" content="article"><meta property="og:url" content="http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/"><meta property="og:locale" content="zh"><meta name="description" content="考虑到每次写完博客都得 1hexo d -g  十分麻烦。本着能自动化的绝不手动的原则，打算尝试用 Github Action 自动构建 hexo 页面。 构建过程中干了不少智障事儿。 尝试用不同分支托管 hexo 站点 和 生成站点 根目录Github Action 的触发条件是push到main分支；而执行脚本包括hexo deploy；后者会再次git push……如此循环。 托管 hexo - Zhang Yaoyun - Yaoyun‘s Blog"><meta name="keywords" content="blog,yaoyun,xgy,yaoyun-xgy"><meta property="article:published_time" content="2021-02-18T07:02:27.000Z"><meta property="article:modified_time" content="2021-06-22T23:16:12.858Z"><meta property="og:updated_time" content="2021-06-22T23:16:12.858Z"><meta property="article:author" content="Zhang Yaoyun"><meta property="article:tag" content="blog,yaoyun,xgy,yaoyun-xgy"><meta name="twitter:card" content="summary">
+
+    
+
+    <!-- ### Canonical link ### -->
+    <link rel="canonical" href="http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/">
+
+    <meta name="generator" content="Hexo 5.4.0">
+
+    <!-- ### Analytics ### -->
+    
+
+
+
+
+
+
+
+    <!-- ### Structured Data ### -->
+    
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "url": "http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/",
+    "@type": "BlogPosting",
+    "logo": "http://yaoyu-xgy.github.io/img/YaoyunCircularAppleTouchIcon.png",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/"
+    },
+    "headline": "尝试用Github Action自动构建hexo页面 | Yaoyun‘s Blog",
+    
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://yaoyu-xgy.github.io/img/YaoyunCircularAppleTouchIcon.png"
+    },
+    
+    "datePublished": "2021-02-18T07:02:27.000Z",
+    "dateModified": "2021-06-22T23:16:12.858Z",
+    "author": {
+        "@type": "Person",
+        "name": "Zhang Yaoyun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://yaoyu-xgy.github.io/img/YaoyunCircularIcon.png"
+        },
+        "description": "Hi, nice to meet you."
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Yaoyun‘s Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://yaoyu-xgy.github.io/img/YaoyunCircularAppleTouchIcon.png"
+        }
+    },
+    
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "http://yaoyu-xgy.github.io/search?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+    },
+    
+    "keywords": "blog,yaoyun,xgy,yaoyun-xgy",
+    "description": "考虑到每次写完博客都得 1hexo d -g  十分麻烦。本着能自动化的绝不手动的原则，打算尝试用 Github Action 自动构建 hexo 页面。 构建过程中干了不少智障事儿。 尝试用不同分支托管 hexo 站点 和 生成站点 根目录Github Action 的触发条件是push到main分支；而执行脚本包括hexo deploy；后者会再次git push……如此循环。 托管 hexo - Zhang Yaoyun - Yaoyun‘s Blog"
+}
+</script>
+
+
+
+    <!-- ### Custom Head ### -->
+    
+</head>
+
+    <body>
+            
+
+            <!-- ### Main content ### -->
+            <!-- ## Header ##-->
+<header>
+    <h1 class="header-title text-center"><a href="/">Yaoyun‘s Blog</a></h1>
+
+    <p class="text-center header-slogan">
+        
+            
+                Hi, nice to meet you.
+            
+        
+    </p>
+
+    <nav class="navbar-section text-center">
+    
+        <a href="/" class="navbar-link">Home</a>
+    
+    
+        <a href="/archives/" class="navbar-link">Archives</a>
+    
+    
+        <a href="/search" class="navbar-link">Search</a>
+    
+    
+    
+        <div class="dropdown dropdown-right">
+    <a class="navbar-link dropdown-toggle" tabindex="0">Share</a>
+    <ul class="menu share-menu">
+
+        <!-- Share Weibo -->
+        
+
+        <!-- Share Twitter -->
+        
+        <li class="menu-item">
+            <a href="https://twitter.com/intent/tweet?text=Yaoyun‘s Blog&url=http://yaoyu-xgy.github.io&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        </li>
+        
+
+        <!-- Share Facebook -->
+        
+
+        <!-- Share Google+ -->
+        
+
+        <!-- Share LinkedIn -->
+        
+
+        <!-- Share QQ -->
+        
+
+        <!-- Share Telegram -->
+        
+        <li class="menu-item">
+            <a href="https://t.me/share/url?url=http://yaoyu-xgy.github.io&text=尝试用Github Action自动构建hexo页面" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        </li>
+        
+
+        <!-- QRCode -->
+        
+        <li class="menu-item">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADUCAAAAADBtVLEAAADuUlEQVR42u3b0W4qMQxFUf7/p9unSggRn+0UiBltXnpb2mHWSIkd2/f2c8HXTZQoUaJEXQ51K15/79//7rN/31/n/r37r6vrPv7s/vvqGk9/V5SoIainiw7e0DNsdfOd91cP99l9ihI1DZU2iMdFudo40mJfPYzVPVR4UaK+EbUMdIufV+gKXgVxUaKuhKqSz5TwVsnn4/VWD0OUqG9F0UVefU8AVYKaDqEvy9JFiXozihzOJnx9eTVJlKg3oGLRvVigVUCkC53c+Mu7HqJEvRFFC/UpAaUBOTUJyMNd/Z0oUVNQtPiySmbJZpAOkauNo0qiY0IrStRBVKdYmRY2vZnOZ5CgLErUNFTVJEvJanUTaQP4bxAXJWoyKh34Os3marik06SuHmIMvqJEHUJ1m89k0JEEThL0STAXJWoKKn14J3ntbj7/2XDK4CtK1GFUGpqiDbBO4kqLKa1BSlGihqBoA4wOYpEhqu4GgQK5KFEDUGVxcLNRQDeG7kBjfMiiRA1G0Y2CBM8qQHd+p93IFiXqAIoOWKXFmooqtMHQRaEpMlGiPoiqih/VAFbaFGjCjIYTb/A/zYgSNQxFGma7g1o7RVCyOcSNQpSoD6N2mgMpuSUDwZ1DJW1YiBI1AVVdnC7Q6sa6B8qdIqgoUZNQqUiYGm60UEObCKS5vQzeokQNQJGBwRQg6XV2El5aZBUlagoqNbbS4q2SWzIUTA6MePhLlKgBqDRYSIoipPmcmgu71xMlaiKKFD06DWkSxF9RKG01CESJ+iCKFDrIQa4KpDvJcqeJJ0rUFBRJIMkwcGcTQIXJjUETUaKmoNIw/c7gRyw8phsMTTx08hUl6hBqp3CSNpo09FEdQMkmgYOvKFEHUN0NIH1QutnOAGRr2FGUqCGoLgAFQtjkrgLz6iGJEvUNqOpAlxoHpGBSXYsMTZJmhShRE1Ak+UwHQFrMJI21zrB/q0IrStSHUKRAQg9/KRjTB0juBRUzRYk6jCIQ0gjoDFSlYE9wokRNRO1uBDQR7Wwoqbm3TKJFiRqA6jacSVOZDBfT4JuusTwkihJ1CEUOb3QTIE1wkvB2NqaykyhK1AEUWdRkI+kM8JIENl0PB19Rog6gaGKZktzuEH4agkzNbtwgECXqAIokjGnhk82nc9CkSbEoUd+E6gwYkkNlp2FANglRor4RRQswnaY22YhScF423USJGoBKjeR0KOwcBMnhMjXvYoVWlKiDKFJ46Sxm0migw4+dRrsoURNQV3qJEiVKlKjLvH4B2VNRLT5G6OgAAAAASUVORK5CYII=" alr="QRCode">
+        </li>
+        
+
+    </ul>
+</div>
+    
+    
+</nav>
+</header>
+
+            
+    <!-- ## Post ## -->
+    <div class="post-container">
+    <div id="post-card" class="card">
+        
+        <div class="card-item-container">
+            <div class="card-inner-cell">
+                <!-- # Post Header Info # -->
+                <div class="card-header">
+                    
+    <h1 class="card-title h3 mb-2">尝试用Github Action自动构建hexo页面</h1>
+
+
+
+
+<div class="post-header-info">
+    <p class="post-header-info-left text-gray">
+        <img class="author-thumb lazyload" data-src="/img/YaoyunCircularIcon.png" src="/img/suka-lazyload.gif" alt="Zhang Yaoyun's Avatar">
+        <span>2021-02-18</span>
+        
+        
+            <!-- Busuanzi Post Views -->
+<span id="busuanzi_container_page_pv" hidden>
+    <span class="suka-devide-dot"></span>
+    <span></span>
+    <span id="busuanzi_value_page_pv"></span>
+    <span>Views</span>
+</span>
+        
+        
+    </p>
+    <div class="post-header-info-right">
+        
+            <div class="dropdown dropdown-right">
+<a class="dropdown-toggle" tabindex="0">Share the post</a>
+<ul class="menu share-menu">
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+    <li class="menu-item">
+        <a href="https://twitter.com/intent/tweet?text=尝试用Github Action自动构建hexo页面&url=http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+    </li>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+    <li class="menu-item">
+        <a href="https://t.me/share/url?url=http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/&text=Yaoyun‘s Blog" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+    </li>
+    
+
+    <!-- QRCode -->
+    
+    <li class="menu-item">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADUCAAAAADBtVLEAAADuUlEQVR42u3b0W4qMQxFUf7/p9unSggRn+0UiBltXnpb2mHWSIkd2/f2c8HXTZQoUaJEXQ51K15/79//7rN/31/n/r37r6vrPv7s/vvqGk9/V5SoIainiw7e0DNsdfOd91cP99l9ihI1DZU2iMdFudo40mJfPYzVPVR4UaK+EbUMdIufV+gKXgVxUaKuhKqSz5TwVsnn4/VWD0OUqG9F0UVefU8AVYKaDqEvy9JFiXozihzOJnx9eTVJlKg3oGLRvVigVUCkC53c+Mu7HqJEvRFFC/UpAaUBOTUJyMNd/Z0oUVNQtPiySmbJZpAOkauNo0qiY0IrStRBVKdYmRY2vZnOZ5CgLErUNFTVJEvJanUTaQP4bxAXJWoyKh34Os3marik06SuHmIMvqJEHUJ1m89k0JEEThL0STAXJWoKKn14J3ntbj7/2XDK4CtK1GFUGpqiDbBO4kqLKa1BSlGihqBoA4wOYpEhqu4GgQK5KFEDUGVxcLNRQDeG7kBjfMiiRA1G0Y2CBM8qQHd+p93IFiXqAIoOWKXFmooqtMHQRaEpMlGiPoiqih/VAFbaFGjCjIYTb/A/zYgSNQxFGma7g1o7RVCyOcSNQpSoD6N2mgMpuSUDwZ1DJW1YiBI1AVVdnC7Q6sa6B8qdIqgoUZNQqUiYGm60UEObCKS5vQzeokQNQJGBwRQg6XV2El5aZBUlagoqNbbS4q2SWzIUTA6MePhLlKgBqDRYSIoipPmcmgu71xMlaiKKFD06DWkSxF9RKG01CESJ+iCKFDrIQa4KpDvJcqeJJ0rUFBRJIMkwcGcTQIXJjUETUaKmoNIw/c7gRyw8phsMTTx08hUl6hBqp3CSNpo09FEdQMkmgYOvKFEHUN0NIH1QutnOAGRr2FGUqCGoLgAFQtjkrgLz6iGJEvUNqOpAlxoHpGBSXYsMTZJmhShRE1Ak+UwHQFrMJI21zrB/q0IrStSHUKRAQg9/KRjTB0juBRUzRYk6jCIQ0gjoDFSlYE9wokRNRO1uBDQR7Wwoqbm3TKJFiRqA6jacSVOZDBfT4JuusTwkihJ1CEUOb3QTIE1wkvB2NqaykyhK1AEUWdRkI+kM8JIENl0PB19Rog6gaGKZktzuEH4agkzNbtwgECXqAIokjGnhk82nc9CkSbEoUd+E6gwYkkNlp2FANglRor4RRQswnaY22YhScF423USJGoBKjeR0KOwcBMnhMjXvYoVWlKiDKFJ46Sxm0migw4+dRrsoURNQV3qJEiVKlKjLvH4B2VNRLT5G6OgAAAAASUVORK5CYII=" alt="QRCode">
+    </li>
+    
+
+</ul>
+</div>
+        
+    </div>
+</div>
+                </div>
+                <div class="card-body">
+                    
+                        
+                        
+                            <div id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B0%9D%E8%AF%95%E7%94%A8%E4%B8%8D%E5%90%8C%E5%88%86%E6%94%AF%E6%89%98%E7%AE%A1-hexo-%E7%AB%99%E7%82%B9-%E5%92%8C-%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9-%E6%A0%B9%E7%9B%AE%E5%BD%95"><span class="post-toc-number">1.</span> <span class="post-toc-text">尝试用不同分支托管 hexo 站点 和 生成站点 根目录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%89%98%E7%AE%A1-hexo-%E7%AB%99%E7%82%B9%E7%9B%AE%E5%BD%95%E5%88%B0%E6%96%B0%E4%BB%93%E5%BA%93"><span class="post-toc-number">2.</span> <span class="post-toc-text">托管 hexo 站点目录到新仓库</span></a></li></ol></div>
+                        
+                    
+                    <article id="post-content">
+                        <p>考虑到每次写完博客都得</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+
+<p>十分麻烦。本着能自动化的绝不手动的原则，打算尝试用 Github Action 自动构建 hexo 页面。</p>
+<p>构建过程中干了不少智障事儿。</p>
+<h2 id="尝试用不同分支托管-hexo-站点-和-生成站点-根目录"><a href="#尝试用不同分支托管-hexo-站点-和-生成站点-根目录" class="headerlink" title="尝试用不同分支托管 hexo 站点 和 生成站点 根目录"></a>尝试用不同分支托管 hexo 站点 和 生成站点 根目录</h2><p>Github Action 的触发条件是push到main分支；而执行脚本包括<code>hexo deploy</code>；后者会再次<code>git push</code>……如此循环。</p>
+<h2 id="托管-hexo-站点目录到新仓库"><a href="#托管-hexo-站点目录到新仓库" class="headerlink" title="托管 hexo 站点目录到新仓库"></a>托管 hexo 站点目录到新仓库</h2><p><code>git push</code>后发现 Github Action 的 <code>HexoDeploy</code> workflow 成功执行，但访问<a href="Yaoyu-Xgy.github.io">我的博客站点</a>后发现页面空白，查看站点根目录后发现<code>index.html</code>是空文件。正在 debug 中。</p>
+
+                    </article>
+                    
+    <blockquote class="post-license">
+        <p>
+            <strong>Author&nbsp;:&nbsp;Zhang Yaoyun</strong>
+            <br>
+            <strong>
+            
+                This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+            </strong>
+            <br>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/">http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/</a>
+        </p>
+    </blockquote>
+
+
+
+    <blockquote id="date-expire-notification" class="post-expired-notify">This article was last updated on <span id="date-expire-num"></span> days ago, and the information described in the article may have changed.</blockquote>
+    <script>
+    (function() {
+        var dateUpdate = Date.parse("2021-06-23");
+        var nowDate = new Date();
+        var a = nowDate.getTime();
+        var b = a - dateUpdate;
+        var daysUpdateExpire = Math.floor(b/(24*3600*1000));
+        if (daysUpdateExpire >= 120) {
+            document.getElementById('date-expire-num').innerHTML = daysUpdateExpire;
+        } else {
+            document.getElementById('date-expire-notification').style.display = 'none';
+        }
+    })();
+    </script>
+
+
+<p class="post-footer-info mb-0 pt-0">Published at&nbsp;<time datetime="2021-02-18T07:02:27.000Z" itemprop="datePublished">2021-02-18</time>
+
+    , Updated at&nbsp;<time datetime="2021-06-22T23:16:12.858Z" itemprop="dateModified">2021-06-23</time>
+
+</p>
+<p class="post-footer-info mb-0 pt-2">
+
+
+
+
+</p>
+
+                </div>
+                <div class="post-nav px-2 bg-gray">
+<ul class="pagination">
+    <!-- Prev Nav -->
+    
+        <li class="page-item page-prev">
+            <a href="/2021/02/23/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E5%96%9C%E6%AC%A2%E5%BE%AE%E4%BF%A1/" rel="prev">
+                <div class="page-item-title"><i class="icon icon-back" aria-hidden="true"></i></div>
+                <div class="page-item-subtitle">为什么我不喜欢微信</div>
+            </a>
+        </li>
+    
+
+    <!-- Next Nav -->
+    
+</ul>
+</div>
+
+                
+                    <!-- # Comment # -->
+                    
+                        <div class="card-footer post-comment">
+                            <div id="disqus_thread"></div>
+
+<div class="btn_click_load"> 
+    <button id="disqus_click_btn" class="btn">Read the comment (Make sure that disqus can load properly)</button>
+</div>
+
+<script>
+    var disqus_config = function () {
+        this.page.url = 'http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script id="disqus-lazy-load-script">
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://disqus.com/next/config.json', true);
+    xhr.timeout = 4000;
+    xhr.send();
+    xhr.onload = function() {
+        if(this.status == 200||this.status == 304){
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//yaoyunblog.disqus.com.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+            document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+        }
+    };
+    xhr.ontimeout = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    xhr.onerror = function(e) {
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:block");
+    };
+    document.getElementById('disqus_click_btn').onclick=function() { //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//yaoyunblog.disqus.com.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        document.getElementById('disqus_click_btn').setAttribute("style", "display:none")
+    };
+</script>
+
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- ### Footer ### -->
+            <footer class="text-center">
+    <!-- footer copyright -->
+    
+        <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
+            <a class="footer-copyright-a" href="http://yaoyu-xgy.github.io">Yaoyun‘s Blog</a>
+        </p>
+
+    <!-- footer custom text -->
+    <p class="footer-text mb-0">
+    
+    </p>
+    <!-- footer develop info -->
+    <p class="footer-develop mb-0">
+        
+    <!-- Busuanzi User Views -->
+    <span id="busuanzi_container_site_uv" hidden>
+        <span></span>
+        <span id="busuanzi_value_site_uv"></span>
+        <span>Viewers</span>
+        
+            <span>|</span>
+        
+    </span>
+
+
+
+
+        
+        Powered by&nbsp;<!--
+         --><a href="https://hexo.io" target="_blank" class="footer-develop-a" rel="external nofollow noopener noreferrer">Hexo</a><span class="footer-develop-divider"></span>Theme&nbsp;-&nbsp;<!--
+         --><a href="https://github.com/SukkaW/hexo-theme-suka" target="_blank" class="footer-develop-a" rel="external noopener">Suka</a>
+    </p>
+</footer>
+
+
+        <!-- ### Import File ### -->
+        <!-- ### Footer JS Import ### -->
+
+<script>
+
+    
+window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 50
+};
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
+console.log('\n %c Suka Theme (hexo-theme-suka) | © SukkaW | Verision 1.3.3 %c https://github.com/SukkaW/hexo-theme-suka \n', 'color: #fff; background: #444; padding:5px 0;', 'background: #bbb; padding:5px 0;');
+
+</script>
+
+<script src="/lib/vanilla-lazyload/lazyload.min.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.js" async></script>
+
+
+<!-- Offset -->
+
+
+
+
+<!-- Comment -->
+
+    
+        
+    
+
+
+<!-- ### Custom Footer ### -->
+
+    </body>
+
+</html>
