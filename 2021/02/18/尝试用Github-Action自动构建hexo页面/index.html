@@ -149,15 +149,15 @@
     
 
 
-    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Yaoyun‘s Blog"><meta name="msapplication-starturl" content="http://yaoyu.github.io"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Yaoyun‘s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="Yaoyun‘s Blog"><meta name="msapplication-starturl" content="http://yaoyu-xgy.github.io"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Yaoyun‘s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- ### The Open Graph & Twitter Card Protocol ### -->
-    <meta property="og:title" content="尝试用Github Action自动构建hexo页面 | Yaoyun‘s Blog"><meta property="og:site_name" content="Yaoyun‘s Blog"><meta property="og:type" content="article"><meta property="og:url" content="http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/"><meta property="og:locale" content="zh"><meta name="description" content="考虑到每次写完博客都得 1hexo d -g  十分麻烦。本着能自动化的绝不手动的原则，打算尝试用 Github Action 自动构建 hexo 页面。 构建过程中干了不少智障事儿。 尝试用不同分支托管 hexo 站点 和 生成站点 根目录Github Action 的触发条件是push到main分支；而执行脚本包括hexo deploy；后者会再次git push……如此循环。 托管 hexo - Zhang Yaoyun - Yaoyun‘s Blog"><meta name="keywords" content="blog,yaoyun,xgy,yaoyun-xgy"><meta property="article:published_time" content="2021-02-18T07:02:27.000Z"><meta property="article:modified_time" content="2021-06-22T23:16:12.858Z"><meta property="og:updated_time" content="2021-06-22T23:16:12.858Z"><meta property="article:author" content="Zhang Yaoyun"><meta property="article:tag" content="blog,yaoyun,xgy,yaoyun-xgy"><meta name="twitter:card" content="summary">
+    <meta property="og:title" content="尝试用Github Action自动构建hexo页面 | Yaoyun‘s Blog"><meta property="og:site_name" content="Yaoyun‘s Blog"><meta property="og:type" content="article"><meta property="og:url" content="http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/"><meta property="og:locale" content="zh"><meta name="description" content="考虑到每次写完博客都得 1hexo d -g  十分麻烦。本着能自动化的绝不手动的原则，打算尝试用 Github Action 自动构建 hexo 页面。 构建过程中干了不少智障事儿。 尝试用不同分支托管 hexo 站点 和 生成站点 根目录Github Action 的触发条件是push到main分支；而执行脚本包括hexo deploy；后者会再次git push……如此循环。 托管 hexo - Zhang Yaoyun - Yaoyun‘s Blog"><meta name="keywords" content="blog,yaoyun,xgy,yaoyun-xgy"><meta property="article:published_time" content="2021-02-18T07:02:27.000Z"><meta property="article:modified_time" content="2021-06-22T23:16:12.858Z"><meta property="og:updated_time" content="2021-06-22T23:16:12.858Z"><meta property="article:author" content="Zhang Yaoyun"><meta property="article:tag" content="blog,yaoyun,xgy,yaoyun-xgy"><meta name="twitter:card" content="summary">
 
     
 
     <!-- ### Canonical link ### -->
-    <link rel="canonical" href="http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/">
+    <link rel="canonical" href="http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/">
 
     <meta name="generator" content="Hexo 5.4.0">
 
@@ -178,18 +178,18 @@
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
-    "url": "http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/",
+    "url": "http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/",
     "@type": "BlogPosting",
-    "logo": "http://yaoyu.github.io/img/suka-favicon.ico",
+    "logo": "http://yaoyu-xgy.github.io/img/suka-favicon.ico",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/"
+        "@id": "http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/"
     },
     "headline": "尝试用Github Action自动构建hexo页面 | Yaoyun‘s Blog",
     
     "image": {
         "@type": "ImageObject",
-        "url": "http://yaoyu.github.io/img/suka-favicon.ico"
+        "url": "http://yaoyu-xgy.github.io/img/suka-favicon.ico"
     },
     
     "datePublished": "2021-02-18T07:02:27.000Z",
@@ -199,7 +199,7 @@
         "name": "Zhang Yaoyun",
         "image": {
             "@type": "ImageObject",
-            "url": "http://yaoyu.github.io/img/default_avatar.png"
+            "url": "http://yaoyu-xgy.github.io/img/default_avatar.png"
         },
         "description": "Hi, nice to meet you."
     },
@@ -208,13 +208,13 @@
         "name": "Yaoyun‘s Blog",
         "logo": {
             "@type": "ImageObject",
-            "url": "http://yaoyu.github.io/img/suka-favicon.ico"
+            "url": "http://yaoyu-xgy.github.io/img/suka-favicon.ico"
         }
     },
     
     "potentialAction": {
         "@type": "SearchAction",
-        "target": "http://yaoyu.github.io/search?s={search_term_string}",
+        "target": "http://yaoyu-xgy.github.io/search?s={search_term_string}",
         "query-input": "required name=search_term_string"
     },
     
@@ -267,7 +267,7 @@
         <!-- Share Twitter -->
         
         <li class="menu-item">
-            <a href="https://twitter.com/intent/tweet?text=Yaoyun‘s Blog&url=http://yaoyu.github.io&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+            <a href="https://twitter.com/intent/tweet?text=Yaoyun‘s Blog&url=http://yaoyu-xgy.github.io&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
         </li>
         
 
@@ -286,14 +286,14 @@
         <!-- Share Telegram -->
         
         <li class="menu-item">
-            <a href="https://t.me/share/url?url=http://yaoyu.github.io&text=尝试用Github Action自动构建hexo页面" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+            <a href="https://t.me/share/url?url=http://yaoyu-xgy.github.io&text=尝试用Github Action自动构建hexo页面" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
         </li>
         
 
         <!-- QRCode -->
         
         <li class="menu-item">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADUCAAAAADBtVLEAAADp0lEQVR42u3b0W7bQAxEUf//T7evReDl3FHsijauXwoksrRHQLhckn38+cLPQ5QoUaJEfR3qMXz+vebpTX5c9/Nn7b2n36N7iRK1BHVa8LPFTg/5uYjTfZ59f1o4XacoUZtQdHHTNc+Cx2nhzYsk6xQl6tNQZHMl16VgclywKFFfiGoeOCWeKRl+FkhEifo0VHOTaSNNiezpoHl6XpN4ixK1BUUOZxv+fVk1SZSoN6Ji0X3YIE8HwlRwaQs+L+96iBL1RlQqTtJmQHO/9IwpmR6TXlGiFqHSH+fUDEtFyqnBNiXPtJAjStQ21HQATItviyUkEDQJwZilixJ1A4okkU2jucFNP7uS5IoStQVFivSkmEmbCikI0e+PgUKUqJtQ07AiTWzT0CNJUKeXlA6kokRtQqWAkQ55sRgSDpFNky0VfkSJ2oAiySTdiH8bKMjix2AiStQCFCm4kAMdaQTQ4WBy/dggECXqRlRKRhM0vZhm8TSJPiYEokQtQNFGQVsYaQo2bSP9uBGLErUIdUpYacONNAvSYGLzXVGiPgF1ZXOdGmu4CBm+S4azRInagkqLmB5EG9hNsZS+0Nj1ECXqJhQZ/iCNa3qPtJGmYFEVM0WJugnV/JHSl9AEgd8mAaJEbULRTbVdOD30kQNkWocoUdtQvz3QtYMcZBNv1yNK1GYUSWbjoEZZ8KeJLCpmihJ1I4oOS9FhxKnBQAa8miRXlKitqFh4B4kqGeqYGgykQRCbFKJELUI1RcopYSUbchokIfeMk5miRN2EooNPaXEkkSXFFRoUUDFTlKgbULRgkgosVwqcJEjRwUhRojahSAJLi/1NY4A2zmlBR5SoDairRcapOEPvRRoHpwD1NMiJErUAlYqMtClNDnG0IU0aF5cGrkSJ+k+osZEVoOTQSIZPmsGR43WiRC1BNc0tsjmnQDNuoOAlHn8mStQSVCouNslqUxAlQSoltnHzFSXqRhQZ4EiDHuSQ94qkuZp4ESXqBhTe4B78P09OAyO0WFoVakSJWoCiw080qKRBqebFXB64EiXqRhQ5tLVDUOllkMJp8xJFidqESs1kenhsh6vIhts8R5SoTaimOZYS1CvN7mkTJgUfUaI2okhTjA4LX01qyRAkztJFiVqMosGEANN3p0ZCvFaUqA9B0aGN1FxLAyFpsCQeaEWJWoRKBZfp4W3jgDTG6WDJpSxdlKg3o1Ihvh2EohtpCgr1pi9K1ALUN31EiRIlStTXfP4C+phSHvD/IF0AAAAASUVORK5CYII=" alr="QRCode">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADUCAAAAADBtVLEAAADuUlEQVR42u3b0W4qMQxFUf7/p9unSggRn+0UiBltXnpb2mHWSIkd2/f2c8HXTZQoUaJEXQ51K15/79//7rN/31/n/r37r6vrPv7s/vvqGk9/V5SoIainiw7e0DNsdfOd91cP99l9ihI1DZU2iMdFudo40mJfPYzVPVR4UaK+EbUMdIufV+gKXgVxUaKuhKqSz5TwVsnn4/VWD0OUqG9F0UVefU8AVYKaDqEvy9JFiXozihzOJnx9eTVJlKg3oGLRvVigVUCkC53c+Mu7HqJEvRFFC/UpAaUBOTUJyMNd/Z0oUVNQtPiySmbJZpAOkauNo0qiY0IrStRBVKdYmRY2vZnOZ5CgLErUNFTVJEvJanUTaQP4bxAXJWoyKh34Os3marik06SuHmIMvqJEHUJ1m89k0JEEThL0STAXJWoKKn14J3ntbj7/2XDK4CtK1GFUGpqiDbBO4kqLKa1BSlGihqBoA4wOYpEhqu4GgQK5KFEDUGVxcLNRQDeG7kBjfMiiRA1G0Y2CBM8qQHd+p93IFiXqAIoOWKXFmooqtMHQRaEpMlGiPoiqih/VAFbaFGjCjIYTb/A/zYgSNQxFGma7g1o7RVCyOcSNQpSoD6N2mgMpuSUDwZ1DJW1YiBI1AVVdnC7Q6sa6B8qdIqgoUZNQqUiYGm60UEObCKS5vQzeokQNQJGBwRQg6XV2El5aZBUlagoqNbbS4q2SWzIUTA6MePhLlKgBqDRYSIoipPmcmgu71xMlaiKKFD06DWkSxF9RKG01CESJ+iCKFDrIQa4KpDvJcqeJJ0rUFBRJIMkwcGcTQIXJjUETUaKmoNIw/c7gRyw8phsMTTx08hUl6hBqp3CSNpo09FEdQMkmgYOvKFEHUN0NIH1QutnOAGRr2FGUqCGoLgAFQtjkrgLz6iGJEvUNqOpAlxoHpGBSXYsMTZJmhShRE1Ak+UwHQFrMJI21zrB/q0IrStSHUKRAQg9/KRjTB0juBRUzRYk6jCIQ0gjoDFSlYE9wokRNRO1uBDQR7Wwoqbm3TKJFiRqA6jacSVOZDBfT4JuusTwkihJ1CEUOb3QTIE1wkvB2NqaykyhK1AEUWdRkI+kM8JIENl0PB19Rog6gaGKZktzuEH4agkzNbtwgECXqAIokjGnhk82nc9CkSbEoUd+E6gwYkkNlp2FANglRor4RRQswnaY22YhScF423USJGoBKjeR0KOwcBMnhMjXvYoVWlKiDKFJ46Sxm0migw4+dRrsoURNQV3qJEiVKlKjLvH4B2VNRLT5G6OgAAAAASUVORK5CYII=" alr="QRCode">
         </li>
         
 
@@ -346,7 +346,7 @@
     <!-- Share Twitter -->
     
     <li class="menu-item">
-        <a href="https://twitter.com/intent/tweet?text=尝试用Github Action自动构建hexo页面&url=http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
+        <a href="https://twitter.com/intent/tweet?text=尝试用Github Action自动构建hexo页面&url=http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/&via=Zhang Yaoyun" target="_blank" rel="external noopener noreferrer nofollow">Share to Twitter</a>
     </li>
     
 
@@ -365,14 +365,14 @@
     <!-- Share Telegram -->
     
     <li class="menu-item">
-        <a href="https://t.me/share/url?url=http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/&text=Yaoyun‘s Blog" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
+        <a href="https://t.me/share/url?url=http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/&text=Yaoyun‘s Blog" target="_blank" rel="external noopener noreferrer nofollow">Share to Telegram</a>
     </li>
     
 
     <!-- QRCode -->
     
     <li class="menu-item">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADUCAAAAADBtVLEAAADp0lEQVR42u3b0W7bQAxEUf//T7evReDl3FHsijauXwoksrRHQLhckn38+cLPQ5QoUaJEfR3qMXz+vebpTX5c9/Nn7b2n36N7iRK1BHVa8LPFTg/5uYjTfZ59f1o4XacoUZtQdHHTNc+Cx2nhzYsk6xQl6tNQZHMl16VgclywKFFfiGoeOCWeKRl+FkhEifo0VHOTaSNNiezpoHl6XpN4ixK1BUUOZxv+fVk1SZSoN6Ji0X3YIE8HwlRwaQs+L+96iBL1RlQqTtJmQHO/9IwpmR6TXlGiFqHSH+fUDEtFyqnBNiXPtJAjStQ21HQATItviyUkEDQJwZilixJ1A4okkU2jucFNP7uS5IoStQVFivSkmEmbCikI0e+PgUKUqJtQ07AiTWzT0CNJUKeXlA6kokRtQqWAkQ55sRgSDpFNky0VfkSJ2oAiySTdiH8bKMjix2AiStQCFCm4kAMdaQTQ4WBy/dggECXqRlRKRhM0vZhm8TSJPiYEokQtQNFGQVsYaQo2bSP9uBGLErUIdUpYacONNAvSYGLzXVGiPgF1ZXOdGmu4CBm+S4azRInagkqLmB5EG9hNsZS+0Nj1ECXqJhQZ/iCNa3qPtJGmYFEVM0WJugnV/JHSl9AEgd8mAaJEbULRTbVdOD30kQNkWocoUdtQvz3QtYMcZBNv1yNK1GYUSWbjoEZZ8KeJLCpmihJ1I4oOS9FhxKnBQAa8miRXlKitqFh4B4kqGeqYGgykQRCbFKJELUI1RcopYSUbchokIfeMk5miRN2EooNPaXEkkSXFFRoUUDFTlKgbULRgkgosVwqcJEjRwUhRojahSAJLi/1NY4A2zmlBR5SoDairRcapOEPvRRoHpwD1NMiJErUAlYqMtClNDnG0IU0aF5cGrkSJ+k+osZEVoOTQSIZPmsGR43WiRC1BNc0tsjmnQDNuoOAlHn8mStQSVCouNslqUxAlQSoltnHzFSXqRhQZ4EiDHuSQ94qkuZp4ESXqBhTe4B78P09OAyO0WFoVakSJWoCiw080qKRBqebFXB64EiXqRhQ5tLVDUOllkMJp8xJFidqESs1kenhsh6vIhts8R5SoTaimOZYS1CvN7mkTJgUfUaI2okhTjA4LX01qyRAkztJFiVqMosGEANN3p0ZCvFaUqA9B0aGN1FxLAyFpsCQeaEWJWoRKBZfp4W3jgDTG6WDJpSxdlKg3o1Ihvh2EohtpCgr1pi9K1ALUN31EiRIlStTXfP4C+phSHvD/IF0AAAAASUVORK5CYII=" alt="QRCode">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADUCAAAAADBtVLEAAADuUlEQVR42u3b0W4qMQxFUf7/p9unSggRn+0UiBltXnpb2mHWSIkd2/f2c8HXTZQoUaJEXQ51K15/79//7rN/31/n/r37r6vrPv7s/vvqGk9/V5SoIainiw7e0DNsdfOd91cP99l9ihI1DZU2iMdFudo40mJfPYzVPVR4UaK+EbUMdIufV+gKXgVxUaKuhKqSz5TwVsnn4/VWD0OUqG9F0UVefU8AVYKaDqEvy9JFiXozihzOJnx9eTVJlKg3oGLRvVigVUCkC53c+Mu7HqJEvRFFC/UpAaUBOTUJyMNd/Z0oUVNQtPiySmbJZpAOkauNo0qiY0IrStRBVKdYmRY2vZnOZ5CgLErUNFTVJEvJanUTaQP4bxAXJWoyKh34Os3marik06SuHmIMvqJEHUJ1m89k0JEEThL0STAXJWoKKn14J3ntbj7/2XDK4CtK1GFUGpqiDbBO4kqLKa1BSlGihqBoA4wOYpEhqu4GgQK5KFEDUGVxcLNRQDeG7kBjfMiiRA1G0Y2CBM8qQHd+p93IFiXqAIoOWKXFmooqtMHQRaEpMlGiPoiqih/VAFbaFGjCjIYTb/A/zYgSNQxFGma7g1o7RVCyOcSNQpSoD6N2mgMpuSUDwZ1DJW1YiBI1AVVdnC7Q6sa6B8qdIqgoUZNQqUiYGm60UEObCKS5vQzeokQNQJGBwRQg6XV2El5aZBUlagoqNbbS4q2SWzIUTA6MePhLlKgBqDRYSIoipPmcmgu71xMlaiKKFD06DWkSxF9RKG01CESJ+iCKFDrIQa4KpDvJcqeJJ0rUFBRJIMkwcGcTQIXJjUETUaKmoNIw/c7gRyw8phsMTTx08hUl6hBqp3CSNpo09FEdQMkmgYOvKFEHUN0NIH1QutnOAGRr2FGUqCGoLgAFQtjkrgLz6iGJEvUNqOpAlxoHpGBSXYsMTZJmhShRE1Ak+UwHQFrMJI21zrB/q0IrStSHUKRAQg9/KRjTB0juBRUzRYk6jCIQ0gjoDFSlYE9wokRNRO1uBDQR7Wwoqbm3TKJFiRqA6jacSVOZDBfT4JuusTwkihJ1CEUOb3QTIE1wkvB2NqaykyhK1AEUWdRkI+kM8JIENl0PB19Rog6gaGKZktzuEH4agkzNbtwgECXqAIokjGnhk82nc9CkSbEoUd+E6gwYkkNlp2FANglRor4RRQswnaY22YhScF423USJGoBKjeR0KOwcBMnhMjXvYoVWlKiDKFJ46Sxm0migw4+dRrsoURNQV3qJEiVKlKjLvH4B2VNRLT5G6OgAAAAASUVORK5CYII=" alt="QRCode">
     </li>
     
 
@@ -409,7 +409,7 @@
                 This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
             </strong>
             <br>
-            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/">http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/</a>
+            <strong>Link to this article&nbsp;:&nbsp;</strong><a href="http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/">http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/</a>
         </p>
     </blockquote>
 
@@ -474,8 +474,8 @@
 
 <script>
     var disqus_config = function () {
-        this.page.url = 'http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yaoyu.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yaoyu-xgy.github.io/2021/02/18/%E5%B0%9D%E8%AF%95%E7%94%A8Github-Action%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BAhexo%E9%A1%B5%E9%9D%A2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
@@ -525,7 +525,7 @@
     <!-- footer copyright -->
     
         <p class="footer-copyright mb-0">Copyright&nbsp;©&nbsp;<span id="copyright-year"></span>
-            <a class="footer-copyright-a" href="http://yaoyu.github.io">Yaoyun‘s Blog</a>
+            <a class="footer-copyright-a" href="http://yaoyu-xgy.github.io">Yaoyun‘s Blog</a>
         </p>
 
     <!-- footer custom text -->
